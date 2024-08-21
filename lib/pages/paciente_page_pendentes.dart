@@ -4,12 +4,12 @@ import 'package:flutter_application_1/api/pacientes_api.dart';
 import 'package:flutter_application_1/models/paciente.dart';
 import 'package:flutter_application_1/shared/scaffold.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class ListPacientesPagePendentes extends StatefulWidget {
   const ListPacientesPagePendentes({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ListPacientesPagePendentesState createState() =>
       _ListPacientesPagePendentesState();
 }

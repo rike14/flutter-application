@@ -9,6 +9,7 @@ class ListPacientesPageConcluidos extends StatefulWidget {
   const ListPacientesPageConcluidos({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ListPacientesPageConcluidosState createState() =>
       _ListPacientesPageConcluidosState();
 }

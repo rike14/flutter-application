@@ -15,14 +15,14 @@ void dispose() {
 }
 
 void saveSubmitScreenPrefs(
-  String _preTeste,
-  String _conduta,
-  String _posTeste,
+  String preTeste,
+  String conduta,
+  String posTeste,
 ) async {
   SharedPreferences prefs = await SharedPreferences.getInstance();
-  prefs.setString("pre_teste", _preTeste);
-  prefs.setString("conduta", _conduta);
-  prefs.setString("pos_teste", _posTeste);
+  prefs.setString("pre_teste", preTeste);
+  prefs.setString("conduta", conduta);
+  prefs.setString("pos_teste", posTeste);
 }
 
 void loadSubmitScreenPrefs() async {

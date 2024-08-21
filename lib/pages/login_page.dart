@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/api/login_api.dart';
 import 'package:flutter_application_1/models/alerta.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -41,7 +40,6 @@ class _LoginPageState extends State<LoginPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     check_if_already_login();
   }
@@ -82,9 +80,9 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                     borderRadius: const BorderRadius.only(
                         bottomLeft: Radius.circular(90))),
-                child: Column(
+                child: const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const <Widget>[
+                  children: <Widget>[
                     Spacer(),
                     Align(
                       alignment: Alignment.center,
@@ -127,6 +125,7 @@ class _LoginPageState extends State<LoginPage> {
                               controller: _login,
                               validator: (String? value) {
                                 _validalogin('');
+                                return null;
                               },
                             ),
                             _textFormField(
@@ -136,6 +135,7 @@ class _LoginPageState extends State<LoginPage> {
                               controller: _senha,
                               validator: (String? value) {
                                 _validaSenha('');
+                                return null;
                               },
                             ),
                             Container(
@@ -294,7 +294,6 @@ class _LoginPageState extends State<LoginPage> {
 
     // print("login : $userId, senha : $id ");
 
-    var response = await LoginApi.login(userId, id);
 
     if (userId == '1' && id == '1') {
       // ignore: use_build_context_synchronously

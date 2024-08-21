@@ -9,6 +9,7 @@ class ConsultaPage extends StatefulWidget {
   const ConsultaPage({Key? key}) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ConsultaPageState createState() => _ConsultaPageState();
 }
 
@@ -27,16 +28,15 @@ class _ConsultaPageState extends State<ConsultaPage> {
   }
 
   void saveSubmitScreenPrefs(
-    String _preTeste,
-    String _conduta,
-    String _posTeste,
+    String preTeste,
+    String conduta,
+    String posTeste,
   ) async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
-    prefs.setString("pre_teste", _preTeste);
-    prefs.setString("conduta", _conduta);
-    prefs.setString("pos_teste", _posTeste);
+    prefs.setString("pre_teste", preTeste);
+    prefs.setString("conduta", conduta);
+    prefs.setString("pos_teste", posTeste);
 
-    print("saved the sumbit fields!");
   }
 
   void loadSubmitScreenPrefs() async {
@@ -95,7 +95,7 @@ class _ConsultaPageState extends State<ConsultaPage> {
           child: Column(children: <Widget>[
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 5,
               child: TextField(
                 controller: _preTeste,
                 keyboardType: TextInputType.text,
@@ -118,7 +118,7 @@ class _ConsultaPageState extends State<ConsultaPage> {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 5,
               child: TextField(
                 controller: _conduta,
                 keyboardType: TextInputType.text,
@@ -141,7 +141,7 @@ class _ConsultaPageState extends State<ConsultaPage> {
             ),
             SizedBox(
               width: MediaQuery.of(context).size.width,
-              height: MediaQuery.of(context).size.height / 3,
+              height: MediaQuery.of(context).size.height / 5,
               child: TextField(
                 controller: _posTeste,
                 keyboardType: TextInputType.text,
@@ -170,7 +170,7 @@ class _ConsultaPageState extends State<ConsultaPage> {
                     margin: const EdgeInsets.all(20),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.deepPurpleAccent.shade200,
+                            backgroundColor: Colors.deepPurpleAccent.shade200,
                             fixedSize: const Size(200, 40)),
                         onPressed: () {
                           alertEvolucao(context,

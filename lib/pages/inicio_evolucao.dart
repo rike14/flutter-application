@@ -91,7 +91,7 @@ class _InicioEvolucaoState extends State<InicioEvolucao> {
                 alignment: Alignment.center,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                      primary: Colors.deepPurpleAccent.shade200,
+                      backgroundColor: Colors.deepPurpleAccent.shade200,
                       fixedSize: const Size(800, 800),
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25))),

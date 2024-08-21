@@ -14,15 +14,15 @@ class PacienteApi extends BaseApi {
     // List<Map<String, dynamic>> r = jsonDecode(response.body);
     List<dynamic> r = jsonDecode(response.body);
     List<Pacientes> pacientes = [];
-    r.forEach((dynamic element) {
+    for (var element in r) {
       pacientes.add(Pacientes.fromMap(element));
-    });
+    }
     return pacientes;
   }
 
   Future<List<Pacientes>> postITEMFiltrado(id) async {
     var urlsss = Uri.parse(
-        'https://jsonplaceholder.typicode.com/users/' + id.toString());
+        'https://jsonplaceholder.typicode.com/users/$id');
 
     var response = await http.get(urlsss, headers: {
       'Content-Type': 'application/json;charset=UTF-8',

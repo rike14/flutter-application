@@ -1,6 +1,5 @@
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_application_1/models/login.dart';
 
 import 'package:http/http.dart' as http;
@@ -23,8 +22,8 @@ class LoginApi {
     decodedData = jsonDecode(data);
 
     Map mapResponse = json.decode(response.body);
-    var _userId = mapResponse['userId'];
-    var _id = mapResponse['id'];
+    var userId0 = mapResponse['userId'];
+    var id0 = mapResponse['id'];
 
     // if (_id == 201) {
     //   true;
@@ -32,8 +31,8 @@ class LoginApi {
     //   const AlertDialog();
     // }
     return Usuario(
-      userId: _userId,
-      id: _id,
+      userId: userId0,
+      id: id0,
     );
   }
 }

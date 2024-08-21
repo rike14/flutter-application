@@ -12,6 +12,7 @@ class ButtonDefault extends StatefulWidget {
   }) : super(key: key);
 
   @override
+  // ignore: library_private_types_in_public_api
   _ButtonDefaultState createState() => _ButtonDefaultState();
 }
 
@@ -20,11 +21,11 @@ class _ButtonDefaultState extends State<ButtonDefault> {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: widget.onPressd,
-      child: const Text('Evolução'),
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(
             widget.backGroundColor ?? Colors.purpleAccent),
       ),
+      child: const Text('Evolução'),
     );
   }
 }
